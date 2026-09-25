@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+/* EC Modas 33 — boutique clara: marfim, preto e dourado (do logo). */
+:root{
+  --bg:#FAF7F1;--surface:#FFFFFF;--surface-2:#F1ECE2;--ink:#161412;--muted:#6A6258;
+  --line:#E7DFD1;--line-forte:#CFC4B1;--topo-bg:rgba(250,247,241,.9);
+  --accent:#161412;--accent-ink:#F6E7B8;--accent-txt:#8C6A1C;--ouro:#B8913A;
+  --pix:#157A57;--pix-bg:#E5F3EC;--escolha-bg:#FBF4E2;--mapa-filtro:sepia(.15);
+  --f-corpo:'Manrope',system-ui,sans-serif;--f-titulo:'Playfair Display',Georgia,serif;--f-titulo-peso:600;
+  --titulo-caixa:none;--titulo-espaco:-.01em;--raio:14px;--raio-btn:999px;--raio-modal:20px;
+}
+.faixa-beta{background:#161412;color:#F1DC9C}
+.marca-txt{display:flex;flex-direction:column;line-height:1}
+.marca-txt b{font:700 21px/1 var(--f-titulo);letter-spacing:.02em}
+.marca-txt small{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent-txt);margin-top:4px;font-weight:700}
+.marca img{box-shadow:0 0 0 1.5px var(--ouro)}
+.selo.oferta{background:var(--ouro);color:#161412}
+.chip[aria-pressed=true]{background:#161412;color:#F6E7B8}
+
+/* hero */
+.hero{padding:56px 0 64px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.hero h1{font:600 clamp(44px,7vw,88px)/.98 var(--f-titulo);margin:14px 0 20px;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--accent-txt)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:30em;margin:0 0 28px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.coroa{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-txt)}
+.coroa svg{width:26px;height:20px}
+.mosaico{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px;position:relative}
+.mosaico img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px}
+.mosaico img:nth-child(1){grid-row:span 2;aspect-ratio:auto;height:100%}
+.mosaico::before{content:"";position:absolute;inset:-14px -14px auto auto;width:62%;height:70%;border:1.5px solid var(--ouro);border-radius:22px;z-index:-1}
+.mosaico .etiqueta{position:absolute;left:-18px;bottom:28px;background:var(--surface);border-radius:14px;padding:14px 18px;box-shadow:0 12px 30px rgba(22,20,18,.14);font-size:14px}
+.mosaico .etiqueta b{display:block;font:600 22px/1.1 var(--f-titulo)}
+@media (max-width:860px){
+  .hero{padding:28px 0 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:30px}
+  .mosaico .etiqueta{left:10px;bottom:10px}
+  .mosaico::before{display:none}
+}
+.faixa-cat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.faixa-cat a{position:relative;aspect-ratio:1;border-radius:18px;overflow:hidden;display:block;text-decoration:none}
+.faixa-cat img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.faixa-cat a:hover img{transform:scale(1.05)}
+.faixa-cat span{position:absolute;inset:auto 0 0 0;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font:600 24px/1 var(--f-titulo)}
+.faixa-cat span small{display:block;font:600 12px/1.6 var(--f-corpo);letter-spacing:.14em;text-transform:uppercase;color:#F1DC9C}
+@media (max-width:620px){.faixa-cat{grid-template-columns:1fr 1fr 1fr;gap:8px}.faixa-cat span{font-size:16px;padding:10px}.faixa-cat span small{display:none}}
+.frase{background:#161412;color:#F6EFE0;text-align:center;padding:64px 0}
+.frase p{font:italic 500 clamp(26px,3.6vw,40px)/1.25 var(--f-titulo);margin:0 auto;max-width:22em}
+.frase span{display:block;margin-top:16px;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#D9B966;font-weight:700}

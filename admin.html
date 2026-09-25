@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Painel da loja</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="fotos/perfil.jpg">
+<link rel="stylesheet" href="assets/base.css?v=20260925161743">
+<link rel="stylesheet" href="assets/tema.css?v=20260925161743">
+</head>
+<body>
+<div class="faixa-beta">Painel de demonstração · os dados ficam só neste navegador</div>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="index.html" id="marca"></a>
+  <a class="btn sec" href="index.html" style="margin-left:auto;min-height:40px">Ver o site</a>
+</div></header>
+<main id="app"></main>
+<script src="assets/config.js?v=20260925161743"></script>
+<script src="assets/loja.js?v=20260925161743"></script>
+<script src="assets/admin.js?v=20260925161743"></script>
+<script>
+  document.title = 'Painel — ' + LOJA.nome;
+  document.getElementById('marca').innerHTML = '<img src="fotos/perfil.jpg" alt=""><span class="marca-txt"><b>' + LOJA.nome.toUpperCase() + '</b><small>' + LOJA.slogan + '</small></span>';
+</script>
+</body>
+</html>

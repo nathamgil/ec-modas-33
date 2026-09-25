@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finalizar compra</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="fotos/perfil.jpg">
+<link rel="stylesheet" href="assets/base.css?v=20260925161743">
+<link rel="stylesheet" href="assets/tema.css?v=20260925161743">
+</head>
+<body>
+<div class="faixa-beta">Versão de demonstração · nenhum pagamento é cobrado</div>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="index.html" id="marca"></a>
+  <span class="co-seguro" style="margin:0 0 0 auto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Compra segura</span>
+</div></header>
+<main class="wrap" id="co"></main>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<script src="assets/config.js?v=20260925161743"></script>
+<script src="assets/loja.js?v=20260925161743"></script>
+<script src="assets/checkout.js?v=20260925161743"></script>
+<script>
+  document.title = 'Finalizar compra — ' + LOJA.nome;
+  document.getElementById('marca').innerHTML = '<img src="fotos/perfil.jpg" alt=""><span class="marca-txt"><b>' + LOJA.nome.toUpperCase() + '</b><small>' + LOJA.slogan + '</small></span>';
+</script>
+</body>
+</html>
